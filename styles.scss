@@ -1,0 +1,374 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+
+/************ OVERALL ******************/
+html,body{
+	scroll-behavior: smooth;
+}
+
+/************  ******************/
+
+
+
+/************ NAV BAR ******************/
+.nav-link {
+	color: magenta;
+	text-shadow: 1px 1px 2px rgb(245, 183, 255), 0 0 1em rgb(245, 183, 255), 0 0 0.2em rgb(245, 183, 255);
+	text-decoration: none;
+	font-family: 'VT323', monospace;
+	font-size: clamp(1px, 1px + 3vw, 30px);
+}
+
+nav{
+	border: 2px solid red;
+	border-color: #ff00ff;
+}
+
+.nav-link:visited{
+	color: #ff00ff;
+}
+/************   ******************/
+
+
+/************ HERO ******************/
+.hero{
+	max-width: 100%;
+}
+/************  ******************/
+
+
+/************ SCREEN ******************/
+#skærm{
+	width: 100%;
+	min-height: 1000px;
+	position: relative;
+	background: linear-gradient(180deg, #FF00FF, #ff00cc, #b700ff, #52024c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#scan{
+	width: 100%;
+	min-height: 100%;
+	top:0;
+	left:0;
+	position: absolute;
+	opacity: 10%;
+	pointer-events: none;
+
+}
+#bezel{
+	max-width: 100%;
+	min-height: 100%;
+	top:0;
+	left:0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#content{
+	font-family: 'VT323', monospace;
+	padding: 50px;
+	color: #2fffce;
+	text-shadow: 1px 1px 2px rgb(183, 197, 255), 0 0 1em rgb(183, 197, 255), 0 0 0.2em rgb(183, 197, 255);
+}
+/************  ******************/
+
+/************ GRADIENT ******************/
+body {
+	background-image: linear-gradient(#000000, #52024c, #ff00ea, #a064c5);
+	min-height: 100%;
+	margin: 0%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/************  ******************/
+
+/************   SKILLCARD ******************/
+#card{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.1fr;
+	border: 2px solid #613894 !important;
+	margin-top: 200px;
+	width: min(90%, 850px);
+	margin-inline: auto;
+	align-items: start;
+
+}
+/************     ******************/
+
+/************  <LUKE BENEDICT VIVAR CORPUZ> ******************/
+#name{
+	grid-row: 1;
+	grid-column: 1/span 5;
+	align-self: center;
+}
+
+.name_info {
+	font-family: 'VT323', monospace;
+	color: #ff0000;
+	text-shadow: 1px 1px 2px rgb(246, 62, 91), 0 0 1em rgb(246, 62, 91), 0 0 0.2em rgb(246, 62, 91);
+	font-size: clamp(10px, 10px + 3vw, 100px);
+	text-align: center;
+}
+/************     ******************/
+
+
+/************  CURRENT OCC + 3 SEMS  ******************/
+.green{
+	font-family: 'VT323', monospace;
+	padding: 1px;
+	color: #00ff39;
+	text-shadow: 1px 1px 2px rgb(201, 255, 183), 0 0 1em rgb(201, 255, 183), 0 0 0.2em rgb(201, 255, 183);
+	font-size: clamp(1px, 1px + 5vw, 50px);
+}
+
+.text{
+	font-family: 'VT323', monospace;
+	padding: 1px;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px rgb(183, 197, 255), 0 0 1em rgb(183, 197, 255), 0 0 0.2em rgb(183, 197, 255);
+	font-size: clamp(1px, 1px + 3vw, 30px);
+}
+
+#skillcard{
+	grid-row: 2;
+	grid-column: 3/span 5;
+}
+/************     ******************/
+
+
+/************   SPINNING HEAD  ******************/
+.Stats{
+	float: left;
+	max-width: 100%;
+	grid-row: 2;
+	grid-column: 1/span 2;
+}
+
+.head{
+	width: 55vmin;
+
+}
+/************     ******************/
+
+/***** SEX: MALE ****/
+
+@font-face {
+	font-family: myFont;
+	src:url(pixel.otf);
+}
+
+.fuku:visited{
+	color: lime;
+}
+
+.sucu:visited{
+	color: white;
+}
+
+.sig:visited{
+	color: white;
+}
+
+.sig{
+	font-family: "Brush Script MT";
+}
+
+.faku:visited{
+	color: white;
+}
+.ID-NUM {
+	color: white;
+	text-shadow: 1px 1px 2px rgb(245, 183, 255), 0 0 1em rgb(245, 183, 255), 0 0 0.2em rgb(245, 183, 255);
+	font-family: myFont;
+	font-size: clamp(6px, 6px + 3vw, 30px);
+}
+
+.stat-item {
+	color: magenta;
+	text-shadow: 1px 1px 2px rgb(245, 183, 255), 0 0 1em rgb(245, 183, 255), 0 0 0.2em rgb(245, 183, 255);
+	font-family: 'VT323', monospace;
+	font-size: clamp(6px, 6px + 3vw, 30px);
+}
+
+.Stats{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+li {
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul.list{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+}
+
+/************   SKILLS  ******************/
+
+#atri{
+	grid-row: 3;
+	grid-column: 1/span 5;
+	align-self: center;
+}
+
+.skillz{
+	font-family: 'VT323', monospace;
+	color: #ff0000;
+	text-shadow: 1px 1px 2px rgb(246, 62, 91), 0 0 1em rgb(246, 62, 91), 0 0 0.2em rgb(246, 62, 91);
+	font-size: clamp(10px, 10px + 3vw, 100px);
+	text-align: center;
+}
+
+.progress{
+	background-color: transparent;
+	width: clamp(20rem, 20px + 5vw, 50px);
+}
+
+.skill_name{
+	font-family: 'VT323', monospace;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px rgb(183, 197, 255), 0 0 1em rgb(183, 197, 255), 0 0 0.2em rgb(183, 197, 255);
+	font-size: clamp(1px, 1px + 3vw, 30px);
+}
+
+#skill_progress{
+	grid-row: 5;
+	grid-column: 2/span 4;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container{
+	--bs-gutter-x: 0!important;
+}
+/************     ******************/
+
+/************  SIGNS  ******************/
+#signs{
+
+}
+
+.dyr{
+	max-width: 50%;
+	display: block;
+	z-index: 9999;
+	position: relative;
+	left: 54%;
+	top: 70rem;
+	transform: translate(-50%, -50%);
+}
+
+.dr{
+	max-width: 45%;
+	display: block;
+	z-index: 999;
+	position: relative;
+	left: 40%;
+	top: 75rem;
+	transform: translate(-50%, -50%);
+}
+
+.mb{
+	max-width: 45%;
+	display: block;
+	z-index: 999;
+	position: relative;
+	left: 54%;
+	top: 80rem;
+
+	transform: translate(-50%, -50%);
+}
+
+.fix{
+	max-width: 20%;
+	display: block;
+	z-index: 999;
+	position: relative;
+	left: 28%;
+	top: 85rem;
+
+	transform: translate(-50%, -50%);
+}
+
+/************     ******************/
+
+
+/************ Bygning ******************/
+
+section{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	margin-top: 10px;
+}
+
+
+/* .column {
+	flex: 30%;
+	padding: 5px;
+} */
+
+.right-building {
+	float: right;
+	grid-row: 1;
+	grid-column: 1/span 2;
+	position: absolute;
+	pointer-events: none;
+
+
+}
+
+.left-building {
+	float: left;
+	grid-row: 1;
+	grid-column: 1/span 2;
+	position: absolute;
+	pointer-events: none;
+
+}
+
+/************     ******************/
